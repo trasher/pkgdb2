@@ -1730,7 +1730,9 @@ class PkgdbLibtests(Modeltests):
         # Check after insert
         actions = pkgdblib.search_actions(
             self.session,
-            package='guake'
+            package='guake',
+            page=1,
+            limit=50,
         )
         self.assertEqual(len(actions), 1)
         self.assertEqual(actions[0].user, 'pingou')
