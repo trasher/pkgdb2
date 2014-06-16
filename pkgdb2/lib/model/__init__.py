@@ -1584,6 +1584,12 @@ class AdminAction(BASE):
                               default=datetime.datetime.utcnow,
                               onupdate=sa.func.now())
 
+    __table_args__ = (
+        sa.UniqueConstraint(
+            'user', 'action', 'status', 'package_id', 'collection_id'),
+    )
+
+
     package = relation("Package")
     collection = relation(
         "Collection",
