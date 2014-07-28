@@ -127,7 +127,7 @@ class AddPackageForm(wtf.Form):
         'Summary <span class="error">*</span>',
         [wtforms.validators.Required()]
     )
-    description = wtforms.TextField(
+    description = wtforms.TextAreaField(
         'Description',
     )
     review_url = wtforms.TextField(
