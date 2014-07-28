@@ -564,3 +564,7 @@ th.headerSortDown {
 #pendingAcl .pkg_button_blue {
     margin-right: 10px;
 }
+
+#requestpackage {
+    float:none;
+}
