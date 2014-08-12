@@ -1998,3 +1998,16 @@ def set_critpath_packages(
         raise PkgdbException('Could not edit package.')
 
     return msg
+
+
+def get_admin_action(session, action_id):
+    """ For a given Admin Action identifier, return the Admin Action object
+    having this identifier.
+
+    :arg session: the session with which to connect to the database.
+    :arg action_id: The identifier of the admin action to retrieve.
+    :returns: an Admin Action object having the specified identifier.
+    :rtype: AdminAction()
+
+    """
+    return model.AdminAction.get(session, action_id)
