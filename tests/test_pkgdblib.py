@@ -1762,6 +1762,7 @@ class PkgdbLibtests(Modeltests):
 
         # Unretire the package
         self.test_add_new_branch_request()
+        self.session.commit()
 
         action = pkgdblib.get_admin_action(self.session, 1)
         self.assertNotEqual(action, None)
