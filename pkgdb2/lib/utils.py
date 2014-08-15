@@ -285,6 +285,9 @@ def log(session, package, topic, message):
                           '%(collection.name)s',
         'collection.update': 'user: %(agent)s edited collection: '
                              '%(collection.name)s',
+        'admin.action.status.update': 'user: %(agent)s updated action: '
+                               '%(action.id)s from %(old_status)s to '
+                               '%(new_status)s',
     }
     subject_templates = {
         'acl.update': '%(agent)s:%(package_name)s %(acl)s  set to %(status)s',
