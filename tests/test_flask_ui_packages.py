@@ -725,7 +725,6 @@ class FlaskUiPackagesTest(Modeltests):
                 '<li class="errors">No package of this name found.</li>'
                 in output.data)
 
-
     @patch('pkgdb2.lib.utils')
     @patch('pkgdb2.packager_login_required')
     def test_package_request_branch(self, login_func, mock_func):
