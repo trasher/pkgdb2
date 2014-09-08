@@ -1617,7 +1617,6 @@ class AdminAction(BASE):
 
         """
         _seen = _seen or []
-        cls = type(self)
 
         ## pylint complains about timetuple() but it is a method
         # pylint: disable=E1102
